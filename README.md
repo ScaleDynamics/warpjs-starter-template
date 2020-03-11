@@ -11,7 +11,7 @@ Node.js latest 8.x or above
 ### Install
 
 - Clone the project
-- run `npm install`
+- Run `npm install`
 
 ### Login to WarpJS
 

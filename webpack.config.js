@@ -19,15 +19,6 @@ module.exports = {
       }
     ]),
     // WarpJS webpack plugin
-    new WarpifyPlugin({
-      config: {
-        // server initialization
-        server: {
-          init: {
-            import: './src/warp-init.js'
-          }
-        }
-      }
-    })
+    new WarpifyPlugin()
   ]
 }
