@@ -4,7 +4,7 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "build": "webpack --progress --mode=production",
-    "predeploy": "npm run dev",
+    "predeploy": "npm run build",
     "deploy": "warp-deploy --asset-dir=dist ."
   },
   "dependencies": {
