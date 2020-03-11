@@ -1,23 +1,24 @@
 'use strict'
 
 // import WarpJS
-import { defaultWarper as warper } from '@warpjs/warp'
+import { defaultWarper as warp } from '@warpjs/warp'
 import engine from '@warpjs/engine'
 
 // init WarpJS
 engine.init()
 
-// warp function
-const hello = name => {
+// back-end warp function
+const hello = (name) => {
   // warp directive
   'warp +server -client'
 
   return `Hello ${name} from Node.js ${process.version}`
 }
 
-// on load
+// on web page load
 window.addEventListener('DOMContentLoaded', async () => {
-  // call function with WarpJS
-  const response = await warper.call(hello, 'World')
+  // call back-end function
+  const response = await warp.call(hello, 'World')
+  // show result in browser
   document.getElementById('result').innerHTML = response
 })

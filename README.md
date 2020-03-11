@@ -13,24 +13,27 @@ Node.js latest 8.x or above
 - Clone the project
 - run `npm install`
 
-### Config WarpJS
+### Login to WarpJS
 
-- Open an account on [starbase.warpjs.com](https://starbase.warpjs.com) to get access to WarpJS
-- Get your `User ID` and a `Project name` ("demo" by default) from the [WarpJS Console](https://starbase.warpjs.com)
-- Rename the `.env.example` file to `.env` and copy your keys inside it
+Run the following command once to authenticate to your [WarpJS account](https://starbase.warpjs.com/):
+
+```bash
+$ npx warp login
+```
 
 ## Run
 
 ```bash
-# run on localhost
-$ npm start
+# run a dev server
+$ npm run dev
 
-# build and deploy to production
-$ npm run build
+# build & deploy to prod
 $ npm run deploy
 ```
 
 ## Resources
 
 - [Getting started with WarpJS](https://warpjs.dev/docs/getting-started)
-- [WarpJS Documentation](https://warpjs.dev/)
+- [WarpJS console](http://starbase.warpjs.com/)
+- [WarpJS documentation](https://warpjs.dev/)
+- [WarpJS samples](https://github.com/WarpJS/samples)
