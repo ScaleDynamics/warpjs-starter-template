@@ -24,7 +24,7 @@ module.exports = {
         // server initialization
         server: {
           init: {
-            import: './server-init.js'
+            import: './src/warp-init.js'
           }
         }
       }
