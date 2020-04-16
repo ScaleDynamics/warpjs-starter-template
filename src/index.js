@@ -1,24 +1,8 @@
-'use strict'
+const axios = require("axios");
 
-// import WarpJS
-import { defaultWarper as warp } from '@warpjs/warp'
-import engine from '@warpjs/engine'
+const fetchData = async () => {
+  const { data } = await axios.get("https://jsonplaceholder.typicode.com/users");
+  return data;
+};
 
-// init WarpJS
-engine.init()
-
-// back-end warp function
-const hello = (name) => {
-  // warp directive
-  'warp +server -client'
-
-  return `Hello ${name} from Node.js ${process.version}`
-}
-
-// on web page load
-window.addEventListener('DOMContentLoaded', async () => {
-  // call back-end function
-  const response = await warp.call(hello, 'World')
-  // show result in browser
-  document.getElementById('result').innerHTML = response
-})
+module.exports = { fetchData };

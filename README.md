@@ -4,7 +4,7 @@ Starter kit to develop, build & deploy a sample project with [WarpJS](https://wa
 
 ## Requirements
 
-Node.js latest 8.x or above
+Node.js latest 8.x or above.
 
 ## Setup
 
@@ -24,10 +24,11 @@ $ npx warp login
 ## Run
 
 ```bash
-# run a dev server
+# run dev server
 $ npm run dev
 
 # build & deploy to prod
+$ npm run build
 $ npm run deploy
 ```
 

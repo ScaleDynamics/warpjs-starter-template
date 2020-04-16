@@ -10,8 +10,9 @@ html {
 
 body {
   background-color: #f3f3f3;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: center;
+  padding-bottom: 100px;
 }
 
 .logo {
