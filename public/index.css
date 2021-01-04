@@ -16,9 +16,5 @@ body {
 }
 
 .logo {
-  background-color: #000;
-  border-radius: 50%;
   padding: 15px;
-  width: 200px;
-  height: 200px;
 }

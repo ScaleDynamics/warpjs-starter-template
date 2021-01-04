@@ -3,24 +3,29 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Getting started with WarpJS</title>
+    <title>WarpJS Starter Template - ScaleDynamics</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
   </head>
   <body>
-    <img class="logo" src="logo.svg" alt="WarpJS" />
-    <h1>Getting Started</h1>
+    <img class="logo" src="logo.png" alt="ScaleDynamics" />
+    <h1>Fetch data</h1>
     <p id="result">⚙️ Loading data...</p>
-    <script src="https://cdn.warpjs.com/warp-engine/3.0.10/engine-web-prod.js"></script>
-    <script src="client.js"></script>
+    <script src="my-module.js"></script>
     <script>
-      const Warp = window["demo-client"];
-      // init warp client
-      const { fetchData } = new Warp();
-      // call warp function
-      fetchData().then((data) => {
+      (async () => {
+        // load engine once
+        await MyModule.loadEngine();
+
+        // init module client
+        const myModule = new MyModule();
+
+        // call module function
+        const data = await myModule.fetchData();
+
+        // show results
         document.getElementById("result").innerHTML = data.map((user) => `${user.id} - ${user.name}`).join("<br>");
-      });
+      })();
     </script>
   </body>
 </html>
