@@ -1,3 +1,7 @@
 module.exports = {
-  project: "demo",
+  output: {
+    format: "umd",
+    filePath: "public/my-module.js",
+    name: "MyModule",
+  },
 };
